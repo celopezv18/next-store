@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const CategoryCard = ({ category }) => {
+const CategoryCard = ({ category }) => { //card layout that shows the structure and design of a category listed
   return (
     <Link href={`/categories/${category.id}`}>
       <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">

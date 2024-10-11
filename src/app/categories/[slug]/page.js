@@ -14,7 +14,7 @@ const CategoryPage = ({ params }) => {
 	  // Fetch products by category slug
 	  const products = await getProductsByCategory(slug);
 	  
-	  if(products.length > 0){
+	  if(products.length > 0){ // validate if the response is not empty
 		setDataProducts(products);
 	  }else{
 		  setDataProducts([]);
@@ -25,7 +25,7 @@ const CategoryPage = ({ params }) => {
     fetchCategoryProduct();
   }, []);
   
-  if (loading) return <p style={{ marginTop: '1rem' }}>Loading Products...</p>;
+  if (loading) return <p style={{ marginTop: '1rem' }}>Loading Products...</p>;  //loader
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">

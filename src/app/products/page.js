@@ -4,12 +4,12 @@ import { getProducts } from '../../../utils/wooCommerceApi';  //import API handl
 import ProductCard from '../../components/ProductCard';  //import product card
 
 export default function ProductsPage() {
-  const [loading, setLoading] = useState(true);
-  const [products, setProducts] = useState(true);
+  const [loading, setLoading] = useState(true); // state for preloading
+  const [products, setProducts] = useState(true); // state to store products data
   
   useEffect(() => {
 	  
-	  const fetchProducts = async () => {
+	  const fetchProducts = async () => { // fetch all products
 		const productsData = await getProducts();
 		setProducts(productsData);
 		setLoading(false);

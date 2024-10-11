@@ -8,9 +8,9 @@ const CategoriesPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchCategories = async () => {
+    const fetchCategories = async () => { // fetch all categories from woocommerce
       
-	  const data = await getCategories();
+	  const data = await getCategories(); // assign the data that comes from the api
 	  if(data.length > 0){
 		setCategories(data);
 	  }else{
@@ -22,7 +22,7 @@ const CategoriesPage = () => {
     fetchCategories();
   }, []);
   
-  if (loading) return <p style={{ marginTop: '1rem' }}>Loading Categories...</p>;
+  if (loading) return <p style={{ marginTop: '1rem' }}>Loading Categories...</p>; //preloader
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
