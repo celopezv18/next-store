@@ -52,14 +52,6 @@ To learn more about the technologies used in this project, check out the followi
 - [WooCommerce REST API Documentation](https://woocommerce.github.io/woocommerce-rest-api-docs/)
 - [React Documentation](https://reactjs.org/docs/getting-started.html)
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/your-repo-name/issues).
-
-## 📝 License
-
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
-
 ---
 
 Happy coding! 🎉
