@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { getProducts } from '../../../utils/wooCommerceApi';  //import API handler
 import ProductCard from '../../components/ProductCard';  //import product card
+import Loader from '../../components/Loader';
 
 export default function ProductsPage() {
   const [loading, setLoading] = useState(true); // state for preloading
@@ -18,7 +19,7 @@ export default function ProductsPage() {
 	  
   },[]);
   
-  if (loading) return <p style={{ marginTop: '1rem' }}>Loading Products...</p>; // loader
+  if (loading) return <Loader /> //loader
   if(!products.length) return <p>There are no products to show.</p>
 
   return (

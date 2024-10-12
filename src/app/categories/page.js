@@ -2,6 +2,7 @@
 import { getCategories } from '../../../utils/wooCommerceApi';  //import API handler
 import { useState, useEffect } from 'react';
 import CategoryCard from '../../components/CategoryCard';
+import Loader from '../../components/Loader';
 
 const CategoriesPage = () => {
   const [categories, setCategories] = useState([]);
@@ -22,7 +23,7 @@ const CategoriesPage = () => {
     fetchCategories();
   }, []);
   
-  if (loading) return <p style={{ marginTop: '1rem' }}>Loading Categories...</p>; //preloader
+  if (loading) return <Loader /> //loader
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">

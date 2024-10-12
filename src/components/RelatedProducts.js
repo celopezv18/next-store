@@ -1,6 +1,7 @@
 import { getRelated } from '../../utils/wooCommerceApi';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Loader from './Loader'
 
 const RelatedProducts = ({ relatedIds }) => {
   const [relatedProducts, setRelatedProducts] = useState([]);
@@ -20,7 +21,7 @@ const RelatedProducts = ({ relatedIds }) => {
     fetchRelatedProducts();
   }, [relatedIds]);
 
-  if (loading) return <p style={{ marginTop: '1rem' }}>Loading related products...</p>;
+  if (loading) return <Loader /> //loader
 
   // Safeguard: check if relatedProducts is an array before mapping
   if (!Array.isArray(relatedProducts) || relatedProducts.length === 0) {

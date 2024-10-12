@@ -30,9 +30,11 @@ export default function RootLayout({ children }) {
 			</header>
 
 			{/* Main content */}
-			<main className="container mx-auto py-8">
-			  {children} {/* Page-specific content is inserted here */}
-			</main>
+			<div className="flex flex-col min-h-screen">
+				<main className="container mx-auto py-8 flex-grow">
+				  {children} {/* Page-specific content is inserted here */}
+				</main>
+			</div>
 
 			{/* Footer */}
 			<footer className="p-4 bg-gray-100 text-center">
