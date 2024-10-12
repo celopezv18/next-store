@@ -1,5 +1,57 @@
-# next-store
-Simple little store created in Next js and Woocommerce, once you download the project just open your terminal and run 'npm install',
-once this is done, you can start the server by running 'npm run dev'.
+# 🛍️ Simple Next.js WooCommerce Store
 
-If you're using your own wordpress installation, go to woocommerce -> settings -> advanced -> rest api there you can create your new api keys to connect the Next project to woocommerce, you should select the user you're creating the keys for and assign the permissions you'd want them to have. In order to enter your keys in the project, you should go to the root of the project and open the file .env.local and replace the value of the variable 'NEXT_PUBLIC_WOO_CONSUMER_KEY' for your public key, 'NEXT_PUBLIC_WOO_CONSUMER_SECRET' for your private key and 'NEXT_PUBLIC_WOO_STORE_URL' for the url of your woocommerc installation, the only part you shouldn't modify it's since '/wp-json/wc/v2/products'
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![WooCommerce](https://img.shields.io/badge/WooCommerce-96588A?style=for-the-badge&logo=woocommerce&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+
+A simple and elegant e-commerce store built with Next.js and WooCommerce integration.
+
+## 🚀 Quick Start
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+
+## 🔧 Configuration
+
+If you're using your own WordPress installation, follow these steps to set up the WooCommerce API:
+
+1. Go to WooCommerce -> Settings -> Advanced -> REST API
+2. Create new API keys
+3. Select the user and assign appropriate permissions
+
+### Environment Variables
+
+Create a `.env.local` file in the root of your project and add the following variables:
+
+```
+NEXT_PUBLIC_WOO_CONSUMER_KEY=your_public_key
+NEXT_PUBLIC_WOO_CONSUMER_SECRET=your_private_key
+NEXT_PUBLIC_WOO_STORE_URL=https://your-store-url.com/wp-json/wc/v2/products
+```
+
+Replace the values with your own API keys and store URL. Make sure to keep the `/wp-json/wc/v2/products` part of the URL unchanged.
+
+## 🌟 Features
+
+- Seamless integration with WooCommerce
+- Fast and responsive user interface
+- Easy customization and extensibility
+
+## 📚 Learn More
+
+To learn more about the technologies used in this project, check out the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [WooCommerce REST API Documentation](https://woocommerce.github.io/woocommerce-rest-api-docs/)
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+
+---
+
+Happy coding! 🎉
