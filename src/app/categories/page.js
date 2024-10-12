@@ -11,8 +11,8 @@ const CategoriesPage = () => {
     const fetchCategories = async () => { // fetch all categories from woocommerce
       
 	  const data = await getCategories(); // assign the data that comes from the api
-	  if(data.length > 0){
-		setCategories(data);
+	  if(data.length > 0){ // check if the data contains information
+		setCategories(data); //assign the data to the state
 	  }else{
 		  setCategories([]);
 	  }

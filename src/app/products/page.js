@@ -9,7 +9,7 @@ export default function ProductsPage() {
   
   useEffect(() => {
 	  
-	  const fetchProducts = async () => { // fetch all products
+	  const fetchProducts = async () => { // fetch all products from woocommerce api
 		const productsData = await getProducts();
 		setProducts(productsData);
 		setLoading(false);
@@ -18,7 +18,7 @@ export default function ProductsPage() {
 	  
   },[]);
   
-  if (loading) return <p style={{ marginTop: '1rem' }}>Loading Products...</p>;
+  if (loading) return <p style={{ marginTop: '1rem' }}>Loading Products...</p>; // loader
   if(!products.length) return <p>There are no products to show.</p>
 
   return (

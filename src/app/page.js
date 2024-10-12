@@ -1,6 +1,6 @@
 // src/app/page.js
 import '../styles/globals.css'; // Import global styles
-import { CartProvider } from '../components/CartContext'; // Import the CartProvider
+import { CartProvider } from '../components/CartContext'; // Import the CartProvider that handles the state management
 // Home page content
 export default function HomePage() {
   return (

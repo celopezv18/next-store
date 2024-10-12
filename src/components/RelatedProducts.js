@@ -7,14 +7,14 @@ const RelatedProducts = ({ relatedIds }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchRelatedProducts = async () => {
+    const fetchRelatedProducts = async () => { // fetch the related products from the given related ids
       if (relatedIds.length > 0) {
         let data = await getRelated(relatedIds) //call the Api for related products
 		setRelatedProducts( data );
       } else {
         setRelatedProducts([]); // Fallback for no relatedIds
       }
-      setLoading(false);
+      setLoading(false); // deactivate loader
     };
 
     fetchRelatedProducts();
