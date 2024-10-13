@@ -1,7 +1,7 @@
 // src/components/ProductCard.js
 import Link from 'next/link';
 
-export default function ProductCard({ product }) { //layout used to display the produsts when is in the product list
+export default function ProductCard({ product }) { //layout used to display the products when is in the product list
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
       <img src={product.images[0].src} alt={product.name} className="w-full h-64 object-cover" />

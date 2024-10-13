@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { getProductsByCategory } from '../../../../utils/wooCommerceApi'; // API helper
 import ProductCard from '../../../components/ProductCard';
-import Loader from '../../../components/Loader';
+import Loader from '../../components/Loader';
 
 const CategoryPage = ({ params }) => {
   const { slug } = params;

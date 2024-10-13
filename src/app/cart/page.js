@@ -1,6 +1,5 @@
 "use client";
-import { useCart } from '../../components/CartContext';
-import { useEffect } from 'react';
+import { useCart } from '../components/CartContext';
 import Link from 'next/link';
 
 export default function CartPage() { // show the items in the cart section

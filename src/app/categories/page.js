@@ -1,8 +1,8 @@
 "use client";
 import { getCategories } from '../../../utils/wooCommerceApi';  //import API handler
 import { useState, useEffect } from 'react';
-import CategoryCard from '../../components/CategoryCard';
-import Loader from '../../components/Loader';
+import CategoryCard from '../components/CategoryCard';
+import Loader from '../components/Loader';
 
 const CategoriesPage = () => {
   const [categories, setCategories] = useState([]);

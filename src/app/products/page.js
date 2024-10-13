@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { getProducts } from '../../../utils/wooCommerceApi';  //import API handler
-import ProductCard from '../../components/ProductCard';  //import product card
-import Loader from '../../components/Loader';
+import ProductCard from '../components/ProductCard';  //import product card
+import Loader from '../components/Loader';
 
 export default function ProductsPage() {
   const [loading, setLoading] = useState(true); // state for preloading

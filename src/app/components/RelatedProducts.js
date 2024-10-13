@@ -1,4 +1,4 @@
-import { getRelated } from '../../utils/wooCommerceApi';
+import { getRelated } from '../../../utils/wooCommerceApi';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Loader from './Loader'

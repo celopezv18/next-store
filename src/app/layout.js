@@ -1,7 +1,7 @@
 // src/app/layout.js
 import '../styles/globals.css'; // Import Tailwind CSS here
-import CartPreview from '../components/CartPreview'; // Small cart in the nav bar
-import { CartProvider } from '../components/CartContext'
+import CartPreview from './components/CartPreview'; // Small cart in the nav bar
+import { CartProvider } from './components/CartContext'
 import Link from 'next/link'
 
 // This is the root layout for all pages

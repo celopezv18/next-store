@@ -85,31 +85,4 @@ const ProductDetailPage = ({ product }) => {
   );
 };
 
-export async function getStaticPaths() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_WOO_STORE_URL}`); // API endpoint
-  const products = await res.json();
-
-  const paths = products.map((product) => ({
-    params: { id: product.id.toString() },
-  }));
-
-  return { paths, fallback: false };
-}
-
-export async function getStaticProps({ params }) {
-  const resProduct = await fetch(`${process.env.NEXT_PUBLIC_WOO_STORE_URL}/${params.id}`); // Fetch the product by ID
-  const product = await resProduct.json();
-  console.log('related down->'+product.related_ids);
-
-  const resRelated = await fetch(`${process.env.NEXT_PUBLIC_WOO_STORE_URL}?include=${product.related_ids}`); // Adjust endpoint to fetch related products
-  const relatedProducts = await resRelated.json();
-
-  return {
-    props: {
-      product,
-      relatedProducts: relatedProducts || [], // Safeguard in case related products aren't returned
-    },
-  };
-}
-
 export default ProductDetailPage;
